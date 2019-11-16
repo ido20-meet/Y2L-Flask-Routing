@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="icon" href="{{ url_for('static', filename='under21.png') }}" type="image/gif" sizes="16x16">
 	<title>-21</title>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,8 +30,67 @@ body {
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #FFBA49;
   color: white;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #FFBA49;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20;
+}
+
+.button:hover {
+  background-color: #555;
+}
+#shawrma {
+	transform:rotat(90deg);
 }
 </style>
 </head>
@@ -39,16 +99,55 @@ body {
 <div class="topnav">
   <a class="active" href="{{ url_for('home') }}">Home</a>
   <a href="{{ url_for('store') }}">Store</a>
-  <a href="#contact">Contact</a>
   <a href="#about">About</a>
+  <a href="{{ url_for('cart') }}">Cart</a>
 </div>
-
 <div style="padding-left:16px">
   <h2>About our site...</h2>
-  <p>This site is avibable only thanks to our investor:
-  Shawarma Man</p>
 </div>
-<img src="{{ url_for('static', filename='shawarma.jpg') }}" height="50%" width="50%">
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='ido.jpg') }}" alt="Ido" width="100%" height="50%">
+      <div class="container">
+        <h2>Ido Forshtat</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Hungry guy who eats a lot</p>
+        <p>nonofurbiz@gmail.com</p>
+        <p><button class="button">Contact(If you really have to...</button></p>
+      </div>
+    </div>
+  </div>
 
+  <div class="column">
+    <div class="card">
+      <img id="shawarma" src="{{ url_for('static', filename='shawarma1.jpg') }}" alt="Shawarma" width="100%">
+      <div class="container">
+        <h2>Shawarma Man</h2>
+        <p class="title">Investor</p>
+        <p>The man is a legend, eats shawrma per day keeps the haters away!</p>
+        <p>shawarma@hotmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='ron.jpg') }}" alt="Ron" style="width:100%">
+      <div class="container">
+        <h2>Ron Key</h2>
+        <p class="title">The creator of this shoes</p>
+        <p>A white monkey we pay to create amazing shoes.</p>
+        <p>monkey@white.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+ <p style="padding-left:16px">This site is avibable only thanks to our investor:
+  Shawarma Man</p>
+<div>
+<img style="padding-bottom:50px" src="{{ url_for('static', filename='shawarma.jpg') }}" height="40%" width="40%">
+</div>
 </body>
 </html>
