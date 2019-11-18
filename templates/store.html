@@ -78,26 +78,35 @@ body {
 <div style="padding-left:16px">
   <h2>Hello welcome we sell shoes only for people who is under the age on 21</h2>
 </div>
-<table>
+<table width="100%">
 	<tr>
-
-		<div class="card" positon="middle">
-		  <img src="{{ url_for('static', filename='offwhitejordan.jpg') }}" style="width:100%">
-		  <h1>Jordan x Off White</h1>
-		  <p class="price">$420.69</p>
-		  <p>This shoes are rare you can buy them once in 420 days. Harry up before somone will buy them before you....</p>
-		  <p><button>Add to Cart</button></p>
-		</div>
-	</tr>
-	<tr>
-
-		<div class="card">
-		  <img src="{{ url_for('static', filename='guccijordan.jpg') }}" style="width:100%">
-		  <h1>Jordan x Gucci</h1>
-		  <p class="price">$696.9</p>
-		  <p>Designer shoes made out of snake's poop smells better then it sounds.</p>
-		  <p><button>Add to Cart</button></p>
-		</div>
+		<th>
+			<div class="card" positon="middle">
+			<img src="{{ url_for('static', filename='offwhitejordan.jpg') }}" style="width:100%">
+			<h1>Jordan x Off White</h1>
+			<p class="price">$420.69</p>
+			<p>This shoes are rare you can buy them once in 420 days. Harry up before somone will buy them before you....</p>
+			<button onclick="window.location.href='/cart'">Add to Cart</button>
+			</div>
+		</th>
+		<th>
+			<div class="card">
+				<img src="{{ url_for('static', filename='guccijordan.jpg') }}" style="width:100%">
+				<h1>Jordan x Gucci</h1>
+				<p class="price">$696.9</p>
+				<p>Designer shoes made out of snake's poop smells better then it sounds.</p>
+				<button onclick="window.location.href='/cart'">Add to Cart</button>
+			</div>
+		</th>
+		<th>
+			<div class="card">
+				<img src="{{ url_for('static', filename='sacainikeblazer.jpg') }}" style="width:100%">
+				<h1>Nike Blazer x Sacai</h1>
+				<p class="price">$222.22</p>
+				<p>Cool shoes for teenagers!</p>
+				<button onclick="window.location.href='/cart'">Add to Cart</button>
+			</div>
+		</th>
 	</tr>
 </table>
 </body>
