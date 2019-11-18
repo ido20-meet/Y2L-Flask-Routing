@@ -76,7 +76,7 @@ body {
 </div>
 
 <div style="padding-left:16px">
-  <h2>Hello welcome we sell shoes only for people who is under the age on 21</h2>
+  <h2>Hello welcome we sell shoes only for people who are under the age of 21</h2>
 </div>
 <table width="100%">
 	<tr>
@@ -104,6 +104,36 @@ body {
 				<h1>Nike Blazer x Sacai</h1>
 				<p class="price">$222.22</p>
 				<p>Cool shoes for teenagers!</p>
+				<button onclick="window.location.href='/cart'">Add to Cart</button>
+			</div>
+		</th>
+	</tr>
+	<tr>
+		<th>
+			<div class="card">
+				<img src="{{ url_for('static', filename='deadpoolvans.jpg') }}" style="width:100%">
+				<h1>Marvel x Vans</h1>
+				<p class="price">$666</p>
+				<p>The best shoes for the best paople, only a few can buy those shoes! 
+				A.K.A Deadpool</p>
+				<button onclick="window.location.href='/cart'">Add to Cart</button>
+			</div>
+		</th>
+		<th>
+			<div class="card">
+				<img src="{{ url_for('static', filename='nikeairsupreme.jpg') }}" style="width:100%">
+				<h1>Nike Air x Supreme</h1>
+				<p class="price">$999</p>
+				<p>Those shoes made out of a lot of air and some red dye</p>
+				<button onclick="window.location.href='/cart'">Add to Cart</button>
+			</div>
+		</th>
+		<th>
+			<div class="card">
+				<img src="{{ url_for('static', filename='unicornyeezy.jpg') }}" style="width:100%">
+				<h1>Adidas Yeezy x Unicorn</h1>
+				<p class="price">$333</p>
+				<p>Hey, I'm not judging</p>
 				<button onclick="window.location.href='/cart'">Add to Cart</button>
 			</div>
 		</th>
