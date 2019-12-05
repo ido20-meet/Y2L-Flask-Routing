@@ -78,17 +78,36 @@ body {
 <div style="padding-left:16px">
   <h2>Hello welcome we sell shoes only for people who are under the age of 21</h2>
 </div>
+<!--
+<br>
+<div class="card">
+	<img src="{{url_for('static', filename=picture_link)}}" style="width:100%">
+	<h1>{{name}}</h1>
+	<p class="price">{{price}}</p>
+	<p>{{description}}</p>
+	<button onclick="window.location.href='/cart'">Add to Cart</button>
+</div>
+<br>
+
 <table width="100%">
 	<tr>
-		<th>
-			<div class="card" positon="middle">
-			<img src="{{ url_for('static', filename='offwhitejordan.jpg') }}" style="width:100%">
-			<h1>Jordan x Off White</h1>
-			<p class="price">$420.69</p>
-			<p>This shoes are rare you can buy them once in 420 days. Harry up before somone will buy them before you....</p>
-			<button onclick="window.location.href='/cart'">Add to Cart</button>
-			</div>
-		</th>
+		-->
+		{%for product in products%}
+			<table width="100%">
+				<tr>		
+					<th>
+						<div class="card" >
+						<img src="{{ url_for('static', filename=product.picture_link) }}" style="width:100%">
+						<h1>{{product.name}}</h1>
+						<p class="price">{{product.price}}</p>
+						<p>{{product.description}}</p>
+						<button onclick="window.location.href='/cart'">Add to Cart</button>
+						</div>
+					</th>
+				</tr>
+			</table>
+		{%endfor%}
+		<!--
 		<th>
 			<div class="card">
 				<img src="{{ url_for('static', filename='guccijordan.jpg') }}" style="width:100%">
@@ -114,8 +133,7 @@ body {
 				<img src="{{ url_for('static', filename='deadpoolvans.jpg') }}" style="width:100%">
 				<h1>Marvel x Vans</h1>
 				<p class="price">$666</p>
-				<p>The best shoes for the best paople, only a few can buy those shoes! 
-				A.K.A Deadpool</p>
+				<p>The best shoes for the best paople, only a few can buy those shoes! A.K.A Deadpool</p>
 				<button onclick="window.location.href='/cart'">Add to Cart</button>
 			</div>
 		</th>
@@ -136,7 +154,7 @@ body {
 				<p>Hey, I'm not judging</p>
 				<button onclick="window.location.href='/cart'">Add to Cart</button>
 			</div>
-		</th>
+		</th>-->
 	</tr>
 </table>
 </body>
