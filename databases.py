@@ -35,8 +35,8 @@ add_product(3, "Nike Blazer x Sacai", '$222.22', 'sacainikeblazer.jpg', "Cool sh
 add_product(4, "Marvel x Vans", '$666', 'deadpoolvans.jpg', "The best shoes for the best paople, only a few can buy those shoes! A.K.A Deadpool", fed())
 add_product(5, "Nike Air x Supreme", '$999', 'nikeairsupreme.jpg', "Those shoes made out of a lot of air and some red dye", fed())
 add_product(6, "Adidas Yeezy x Unicorn", '$333', 'unicornyeezy.jpg', "Hey, I'm not judging", fed())
+add_product(7, "Jordan Not For Resale", '$150','Jordan_Notforresale.png', "It's good", fed())
 """
-
 
 def update_product(Id, name, price, picture_link, description, session):
 	declarative_base = session.query(
