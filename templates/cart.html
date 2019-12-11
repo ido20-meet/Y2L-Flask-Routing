@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="icon" href="{{ url_for('static', filename='under21.png') }}" type="image/gif" sizes="16x16">
-	<title>-21</title>
+	<title>Under 21</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -50,6 +50,11 @@ body {
 <div style="padding-left:16px">
   <h2>Your Cart is empty right now</h2>
 </div>
+{%for product in product %}
+	<div class="card">
+	<img src="{{picture_link}}" style="width:10%">
+	<h1>{{product_name}}</h1>
 	
+	</div>	
 </body>
 </html>

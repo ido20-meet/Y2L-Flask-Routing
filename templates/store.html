@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="icon" href="{{ url_for('static', filename='under21.png') }}" type="image/gif" sizes="16x16">
-	<title>-21</title>
+	<title>Under 21</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -92,9 +92,9 @@ body {
 <table width="100%">
 	<tr>
 		-->
+<table width="100%">
+	<tr>
 		{%for product in products%}
-			<table width="100%">
-				<tr>		
 					<th>
 						<div class="card" >
 						<img src="{{ url_for('static', filename=product.picture_link) }}" style="width:100%">
@@ -104,9 +104,9 @@ body {
 						<button onclick="window.location.href='/cart'">Add to Cart</button>
 						</div>
 					</th>
-				</tr>
-			</table>
 		{%endfor%}
+	</tr>
+</table>
 		<!--
 		<th>
 			<div class="card">
@@ -154,8 +154,8 @@ body {
 				<p>Hey, I'm not judging</p>
 				<button onclick="window.location.href='/cart'">Add to Cart</button>
 			</div>
-		</th>-->
+		</th>
 	</tr>
-</table>
+</table>-->
 </body>
 </html>
